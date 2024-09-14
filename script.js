@@ -194,8 +194,8 @@ function saveImage() {
     }
 
     // Draw all images
-    const head = document.getElementById('head');
     const body = document.getElementById('body');
+    const head = document.getElementById('head');
     const shoes = document.getElementById('shoes');
 
     Promise.all([
