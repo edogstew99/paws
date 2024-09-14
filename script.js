@@ -1,13 +1,3 @@
-const heads = [
-    'images/h1.png', 'images/h2.png', 'images/h3.png', 'images/h4.png', 'images/h5.png',
-    'images/h6.png', 'images/h7.png', 'images/h9.png', 'images/h10.png',
-    'images/h11.png', 'images/h12.png', 'images/h13.png', 'images/h14.png', 'images/h15.png',
-    'images/h16.png', 'images/h17.png', 'images/h18.png', 'images/h19.png', 'images/h20.png',
-    'images/h21.png', 'images/h23.png', 'images/h24.png', 'images/h25.png',
-    'images/h26.png', 'images/h27.png', 'images/h28.png', 'images/h29.png', 'images/h30.png',
-    'images/h31.png', 'images/h32.png', 'images/h33.png', 'images/h34.png', 'images/h35.png'
-];
-
 const bodies = [
     'images/b1.png', 'images/b2.png', 'images/b3.png', 'images/b4.png', 'images/b5.png',
     'images/b6.png', 'images/b7.png', 'images/b8.png', 'images/b9.png', 'images/b10.png',
@@ -16,6 +6,16 @@ const bodies = [
     'images/b21.png', 'images/b22.png', 'images/b23.png', 'images/b24.png', 'images/b25.png',
     'images/b26.png', 'images/b27.png', 'images/b28.png', 'images/b29.png', 'images/b30.png',
     'images/b31.png'
+];
+
+const heads = [
+    'images/h1.png', 'images/h2.png', 'images/h3.png', 'images/h4.png', 'images/h5.png',
+    'images/h6.png', 'images/h7.png', 'images/h9.png', 'images/h10.png',
+    'images/h11.png', 'images/h12.png', 'images/h13.png', 'images/h14.png', 'images/h15.png',
+    'images/h16.png', 'images/h17.png', 'images/h18.png', 'images/h19.png', 'images/h20.png',
+    'images/h21.png', 'images/h23.png', 'images/h24.png', 'images/h25.png',
+    'images/h26.png', 'images/h27.png', 'images/h28.png', 'images/h29.png', 'images/h30.png',
+    'images/h31.png', 'images/h32.png', 'images/h33.png', 'images/h34.png', 'images/h35.png'
 ];
 
 const shoes = [
@@ -47,8 +47,8 @@ const optionsState = {
 
 window.onload = function() {
     createOptions('background-options');
-    createOptions('head-options');
     createOptions('body-options');
+    createOptions('head-options');
     createOptions('shoes-options');
 
     document.getElementById('save-button').addEventListener('click', saveImage);
