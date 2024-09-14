@@ -40,8 +40,8 @@ const backgrounds = [
 
 const optionsState = {
     'background-options': { currentIndex: 0, items: backgrounds },
-    'head-options': { currentIndex: 0, items: heads },
     'body-options': { currentIndex: 0, items: bodies },
+    'head-options': { currentIndex: 0, items: heads },
     'shoes-options': { currentIndex: 0, items: shoes }
 };
 
