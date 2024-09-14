@@ -81,7 +81,17 @@ function selectItem(src, targetId) {
     
     const itemNumber = parseInt(src.match(/(\d+)/)[1]);
     
-    if (targetId === 'head') {
+    if (targetId === 'body') {
+        if (itemNumber >= 12 && itemNumber <= 31) {
+            img.style.top = '79px';
+            img.style.left = '13px';
+        } else {
+            img.style.top = '115px';
+            img.style.left = '-28px';
+        }
+        img.style.zIndex = '1';
+    }
+    else if (targetId === 'head') {
         if (itemNumber >= 27 && itemNumber <= 35) {
             img.style.top = '82px';
             img.style.left = '15px';
@@ -97,15 +107,6 @@ function selectItem(src, targetId) {
         }
         img.style.zIndex = '2';
         makeDraggable(img);
-    } else if (targetId === 'body') {
-        if (itemNumber >= 12 && itemNumber <= 31) {
-            img.style.top = '79px';
-            img.style.left = '13px';
-        } else {
-            img.style.top = '115px';
-            img.style.left = '-28px';
-        }
-        img.style.zIndex = '1';
     } else if (targetId === 'shoes') {
         if (itemNumber >= 8 && itemNumber <= 16) {
             img.style.top = '251px';
