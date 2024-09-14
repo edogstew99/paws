@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Profile Picture Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Bungee+Shade&display=swap" rel="stylesheet">
+    <style>
+        body { padding: 0 20px; }
+        #background-section { float: left; width: 15%; }
+        #profile-picture-section { float: left; width: 50%; padding: 0 2.5%; }
+        #options { float: right; width: 30%; }
+        .option-category h2 { text-align: right; padding-right: 20px; }
+        .option-grid { overflow: hidden; }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <h1 style="font-family: 'Bungee Shade', cursive; font-size: 2.5em;">Profile Picture Generator</h1>
+        </header>
+        <main id="generator">
+            <section id="background-section">
+                <div class="option-category">
+                    <h2>Background Options</h2>
+                    <div class="option-carousel">
+                        <button class="nav-button left" data-target="background-options" aria-label="Previous background option">&#8592;</button>
+                        <div id="background-options" class="option-grid"></div>
+                        <button class="nav-button right" data-target="background-options" aria-label="Next background option">&#8594;</button>
+                    </div>
+                </div>
+            </section>
+            <section id="profile-picture-section">
+                <div id="profile-picture-container">
+                    <div id="profile-picture">
+                        <img id="background" src="" alt="Background">
+                        <img id="head" src="" alt="Head" draggable="true">
+                        <img id="body" src="" alt="Body" draggable="true">
+                        <img id="shoes" src="" alt="Shoes" draggable="true">
+                    </div>
+                </div>
+                <button id="save-button" class="btn btn-primary" style="transform: scale(3);"></button>
+            </section>
+            <section id="options">
+                <div class="option-category">
+                    <h2>Head Options</h2>
+                    <div class="option-carousel">
+                        <button class="nav-button left" data-target="head-options" aria-label="Previous head option">&#8592;</button>
+                        <div id="head-options" class="option-grid"></div>
+                        <button class="nav-button right" data-target="head-options" aria-label="Next head option">&#8594;</button>
+                    </div>
+                </div>
+                <div class="option-category">
+                    <h2>Body Options</h2>
+                    <div class="option-carousel">
+                        <button class="nav-button left" data-target="body-options" aria-label="Previous body option">&#8592;</button>
+                        <div id="body-options" class="option-grid"></div>
+                        <button class="nav-button right" data-target="body-options" aria-label="Next body option">&#8594;</button>
+                    </div>
+                </div>
+                <div class="option-category">
+                    <h2>Shoes Options</h2>
+                    <div class="option-carousel">
+                        <button class="nav-button left" data-target="shoes-options" aria-label="Previous shoes option">&#8592;</button>
+                        <div id="shoes-options" class="option-grid"></div>
+                        <button class="nav-button right" data-target="shoes-options" aria-label="Next shoes option">&#8594;</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer style="clear: both;">
+            <p>&copy; 2023 Profile Picture Generator. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

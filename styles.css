@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/YourNewFont.ttf') format('truetype');
+    /* Replace 'YourNewFont.ttf' with the actual name of your font file */
+}
+
+body {
+    font-family: 'CustomFont', Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+#generator {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#profile-picture-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profile-picture {
+    width: 600px;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    background-color: white;
+}
+
+#profile-picture img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    opacity: 0; /* Start with invisible images */
+    transition: opacity 0.3s ease; /* Smooth transition when appearing */
+}
+
+#head { 
+    top: 117px;
+    left: 1px;  /* Changed from 21px to 1px */
+    z-index: 3;
+}
+
+#body { 
+    top: 115px;
+    left: -8px;  /* Changed from 12px to -8px */
+    z-index: 2;
+}
+
+#shoes { 
+    top: 103px;
+    left: 0px;  /* Changed from 20px to 0px */
+    z-index: 1;
+}
+
+#save-button {
+    margin-top: 20px;
+    width: 600px; /* Match the width of the profile picture */
+    height: 150px; /* Adjust as needed */
+    background-image: url('images/savebutton.png'); /* Update this path if needed */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#save-button:hover {
+    transform: scale(1.05);
+}
+
+#options {
+    flex: 1;
+    margin-left: 30px; /* Increased from 20px */
+    background-color: white;
+    padding: 25px; /* Increased from 20px */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+.option-category {
+    margin-bottom: 20px;
+}
+
+.option-category h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 20px; /* Increased font size */
+}
+
+.option-grid {
+    display: flex;
+    gap: 15px;
+    overflow-x: hidden; /* Changed from auto to hidden */
+    flex-grow: 0; /* Changed from 1 to 0 */
+    justify-content: center; /* Changed from flex-start to center */
+    padding: 10px 0;
+}
+
+.option-grid img {
+    width: 120px; /* Increased from 80px */
+    height: 120px; /* Increased from 80px */
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.option-grid img:hover {
+    border-color: #4CAF50;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 30px; /* Increased from 24px */
+    cursor: pointer;
+    padding: 0 15px; /* Increased padding */
+}
+
+.nav-button:hover {
+    color: #4CAF50;
+}
+
+.option-carousel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; /* Add some space between categories */
+}
