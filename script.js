@@ -195,13 +195,15 @@ function saveImage() {
     }
 
     // Draw all images
+    const background = document.getElementById('background');
     const body = document.getElementById('body');
     const head = document.getElementById('head');
     const shoes = document.getElementById('shoes');
 
     Promise.all([
-        drawImageOnCanvas(head),
+        drawImageOnCanvas(background),
         drawImageOnCanvas(body),
+        drawImageOnCanvas(head),
         drawImageOnCanvas(shoes)
     ]).then(() => {
         // Create download link
